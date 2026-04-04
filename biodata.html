@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri | My Website</title>
+    <style>
+        /* Dasar & Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navigasi Simpel */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9a9e;
+        }
+
+        /* Kartu Biodata */
+        .profile-card {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-header {
+            background: #2c3e50;
+            height: 120px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background: #ddd;
+            position: absolute;
+            bottom: -65px;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 80px 40px 40px;
+        }
+
+        .card-body h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .card-body p.subtitle {
+            color: #764ba2;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        /* Tabel Info */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #888;
+            width: 40%;
+        }
+
+        .value {
+            color: #444;
+        }
+
+        /* Footer Kartu */
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-contact {
+            background: #764ba2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #667eea;
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="video.html">Video</a>
+    </nav>
+
+    <div class="profile-card">
+        <div class="card-header">
+            <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+        </div>
+
+        <div class="card-body">
+            <h2>Muhammad Fikri Haikal</h2>
+            <p class="subtitle">Mahasiswa Sosial Ekonomi Peikanan</p>
+
+            <table class="info-table">
+                <tr>
+                    <td class="label">NIM</td>
+                    <td class="value">2310715310006</td>
+                </tr>
+                <tr>
+                    <td class="label">Tempat Lahir</td>
+                    <td class="value">Batulicin</td>
+                </tr>
+                <tr>
+                    <td class="label">Tanggal Lahir</td>
+                    <td class="value">22 September 2004</td>
+                </tr>
+                <tr>
+                    <td class="label">Email</td>
+                    <td class="value">kalfikkz666@gmail.com</td>
+                </tr>
+            </table>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
