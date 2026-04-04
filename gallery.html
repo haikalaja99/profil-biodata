@@ -3,135 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | My Portfolio</title>
+    <title>Gallery | Minimalist Aesthetic</title>
     <style>
-        /* Reset & Base Style */
+        /* Reset & Font */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'optima', 'Didot', 'Playfair Display', serif;
         }
 
         body {
-            background-color: #111; /* Tema gelap agar foto lebih menonjol */
-            color: #fff;
-            padding-top: 80px;
+            background-color: #ffffff; /* Putih Bersih */
+            color: #1a1a1a;
+            line-height: 1.6;
         }
 
-        /* Navigasi Modern */
+        /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px 0;
+            padding: 30px;
             text-align: center;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
+            background: #fff;
         }
 
         nav a {
-            color: #aaa;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
+            color: #888;
+            margin: 0 20px;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
             transition: 0.3s;
             text-transform: uppercase;
         }
 
         nav a:hover {
-            color: #fff;
+            color: #000;
         }
 
-        /* Header Halaman */
-        .gallery-header {
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .header-section {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
 
-        .gallery-header h1 {
+        .header-section h1 {
             font-size: 2.5rem;
             font-weight: 300;
-            letter-spacing: 5px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
-        .gallery-header p {
-            color: #666;
-            margin-top: 10px;
+        .header-section .line {
+            width: 50px;
+            height: 1px;
+            background: #000;
+            margin: 20px auto;
         }
 
-        /* Grid Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px 50px;
+        /* Gallery Layout: 3 Photos Only */
+        .gallery-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 100px; /* Jarak jauh antar foto agar estetik */
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-
-        /* Item Gallery */
         .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 300px;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Overlay Efek */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 40px;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
         }
 
-        .overlay span {
-            color: white;
-            border: 1px solid white;
-            padding: 10px 20px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Foto Ganjil (1 & 3) */
+        .gallery-item.odd { flex-direction: row; }
+        /* Foto Genap (2) */
+        .gallery-item.even { flex-direction: row-reverse; }
+
+        .img-container {
+            flex: 1.5;
+            overflow: hidden;
+            background: #f9f9f9;
+            padding: 15px; /* Memberikan kesan bingkai foto */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .img-container img {
+            width: 100%;
+            display: block;
+            filter: sepia(20%); /* Sedikit filter hangat agar aesthetic */
+            transition: 0.6s;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.03);
+            filter: sepia(0%);
+        }
+
+        .caption-container {
+            flex: 1;
+        }
+
+        .caption-container span {
+            font-size: 0.7rem;
             letter-spacing: 2px;
+            color: #aaa;
+            text-transform: uppercase;
         }
 
-        /* Hover Interaction */
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        .caption-container h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 10px 0;
         }
 
-        .gallery-item:hover .overlay {
-            opacity: 1;
+        .caption-container p {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
         }
 
-        /* Responsif */
-        @media (max-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 100px 0 50px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-item, .gallery-item.even {
+                flex-direction: column;
+                gap: 20px;
             }
-            .gallery-header h1 {
-                font-size: 1.8rem;
-            }
+            .header-section h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -145,31 +164,51 @@
     </nav>
 
     <div class="container">
-        <div class="gallery-header">
-            <h1>VISUAL MOMENTS</h1>
-            <p>Koleksi dokumentasi dan aktivitas perikanan saya.</p>
+        <div class="header-section">
+            <h1>The Gallery</h1>
+            <div class="line"></div>
+            <p>gallery tempat tinggal saya.</p>
         </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=800&q=80" alt="Marine 1">
-                <div class="overlay"><span>Lihat Foto</span></div>
+        <div class="gallery-wrapper">
+            <div class="gallery-item odd">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800" alt="Moment 1">
+                </div>
+                <div class="caption-container">
+                    <span>01 / Moment</span>
+                    <h2>Penelitian Lapangan</h2>
+                    <p>"Mengambil data kualitas air di pesisir pantai untuk tugas akhir."</p>
+                </div>
             </div>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=800&q=80" alt="Marine 2">
-                <div class="overlay"><span>Koleksi 2</span></div>
+            <div class="gallery-item even">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1544551763-47a0159c963f?w=800" alt="Moment 2">
+                </div>
+                <div class="caption-container">
+                    <span>02 / Moment</span>
+                    <h2>Eksplorasi Laut</h2>
+                    <p>"Keindahan ekosistem bawah laut yang harus tetap kita jaga bersama."</p>
+                </div>
             </div>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1544551763-47a0159c963f?auto=format&fit=crop&w=800&q=80" alt="Marine 3">
-                <div class="overlay"><span>Koleksi 3</span></div>
+            <div class="gallery-item odd">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Moment 3">
+                </div>
+                <div class="caption-container">
+                    <span>03 / Moment</span>
+                    <h2>Diskusi Santai</h2>
+                    <p>"Bertukar pikiran mengenai masa depan perikanan berkelanjutan."</p>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=800&q=80" alt="Marine 4">
-                <div class="overlay"><span>Koleksi 4</span></div>
-            </div>
+    <footer>
+        &copy; 2026 CURATED BY [Muhammad Fikri Haikal]
+    </footer>
 
-            <div class="gallery-item">
-                <img src="
+</body>
+</html>
