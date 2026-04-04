@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video | Modern Split</title>
+    <title>Video | Local Content</title>
     <style>
         /* Reset Dasar */
         * {
@@ -48,7 +48,7 @@
             color: #ff4d4d;
         }
 
-        /* Header Section */
+        /* Header Title */
         .header-title {
             padding: 140px 50px 60px;
             text-align: left;
@@ -65,7 +65,7 @@
             padding-left: 20px;
         }
 
-        /* Split Section for Video */
+        /* Split Section */
         .split-video-section {
             display: flex;
             min-height: 80vh;
@@ -74,35 +74,24 @@
             flex-wrap: wrap;
         }
 
-        /* Sisi Kiri: Video Container */
+        /* Sisi Kiri: Native Video Player */
         .video-box {
             flex: 1.5;
             min-width: 50%;
-            background: #000;
-            position: relative;
+            background: #000; /* Latar belakang hitam untuk video */
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
-        /* Membuat Iframe Youtube Responsif */
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
-            height: 0;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .video-box video {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover; /* Video memenuhi area tanpa gap */
         }
 
-        /* Sisi Kanan: Deskripsi */
+        /* Sisi Kanan: Info */
         .video-info {
             flex: 1;
             min-width: 400px;
@@ -135,23 +124,6 @@
             margin-bottom: 30px;
         }
 
-        .btn-watch {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 2px solid #1a1a1a;
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: 0.3s;
-            align-self: flex-start;
-        }
-
-        .btn-watch:hover {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
         /* Footer */
         footer {
             padding: 60px 50px;
@@ -162,7 +134,7 @@
             border-top: 1px solid #f0f0f0;
         }
 
-        /* Mobile Responsive */
+        /* Responsive Mobile */
         @media (max-width: 992px) {
             .video-info {
                 padding: 40px 30px;
@@ -170,6 +142,7 @@
             }
             .video-box {
                 min-width: 100%;
+                height: 50vh;
             }
             .header-title h1 {
                 font-size: 2.5rem;
@@ -192,22 +165,24 @@
 
     <div class="split-video-section">
         <div class="video-box">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-            </div>
+            <video controls poster="Video 1.mp4">
+                <source src="Video 1.mp4" type="Video 1.mp4">
+                Browser kamu tidak mendukung pemutar video HTML5.
+            </video>
         </div>
 
         <div class="video-info">
-            <span>Featured Video</span>
-            <h2>Sustainable Fisheries</h2>
-            <p>Video ini menjelaskan pentingnya menjaga ekosistem perairan melalui metode penangkapan ikan yang berkelanjutan untuk masa depan generasi mendatang.</p>
-            
-            <a href="https://www.youtube.com" target="_blank" class="btn-watch">Buka di YouTube</a>
+            <span>Local Content</span>
+            <h2>Field Study Documentation</h2>
+           
+            <p style="font-size: 0.85rem; color: #888;">
+                *Pastikan file video berada dalam folder yang sama dengan file HTML ini di repository GitHub kamu.
+            </p>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 [Muhammad Fikri Haikal]. Tugas sistem informasi Manajemen Perikanan.
+        &copy; 2026 [Muhammad Fikri Haikal]. Tugas Sistem Informasi Manajemen Perikanan.
     </footer>
 
 </body>
