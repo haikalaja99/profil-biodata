@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video | Modern Split</title>
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff4d4d;
+        }
+
+        /* Header Section */
+        .header-title {
+            padding: 140px 50px 60px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-title h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1;
+            border-left: 8px solid #ff4d4d;
+            padding-left: 20px;
+        }
+
+        /* Split Section for Video */
+        .split-video-section {
+            display: flex;
+            min-height: 80vh;
+            width: 100%;
+            border-top: 1px solid #f0f0f0;
+            flex-wrap: wrap;
+        }
+
+        /* Sisi Kiri: Video Container */
+        .video-box {
+            flex: 1.5;
+            min-width: 50%;
+            background: #000;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Membuat Iframe Youtube Responsif */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Sisi Kanan: Deskripsi */
+        .video-info {
+            flex: 1;
+            min-width: 400px;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .video-info span {
+            color: #ff4d4d;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .video-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .video-info p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-watch {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            align-self: flex-start;
+        }
+
+        .btn-watch:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 50px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            letter-spacing: 1px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .video-info {
+                padding: 40px 30px;
+                min-width: 100%;
+            }
+            .video-box {
+                min-width: 100%;
+            }
+            .header-title h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="video.html">Video</a>
+    </nav>
+
+    <div class="header-title">
+        <h1>Motion <br> Archive.</h1>
+    </div>
+
+    <div class="split-video-section">
+        <div class="video-box">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-info">
+            <span>Featured Video</span>
+            <h2>Sustainable Fisheries</h2>
+            <p>Video ini menjelaskan pentingnya menjaga ekosistem perairan melalui metode penangkapan ikan yang berkelanjutan untuk masa depan generasi mendatang.</p>
+            
+            <a href="https://www.youtube.com" target="_blank" class="btn-watch">Buka di YouTube</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 [Muhammad Fikri Haikal]. Tugas sistem informasi Manajemen Perikanan.
+    </footer>
+
+</body>
+</html>
