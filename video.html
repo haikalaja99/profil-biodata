@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video | MP4 Content</title>
+    <title>Video | Modern Split MP4</title>
     <style>
-        /* Reset Dasar */
+        /* Reset & Font Modern */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
         }
 
         body {
@@ -19,7 +19,7 @@
             line-height: 1.6;
         }
 
-        /* Navigasi Modern */
+        /* Navigasi */
         nav {
             position: fixed;
             top: 0;
@@ -44,14 +44,11 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #ff4d4d;
-        }
+        nav a:hover { color: #ff4d4d; }
 
-        /* Header Title */
+        /* Header */
         .header-title {
             padding: 140px 50px 60px;
-            text-align: left;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -59,7 +56,6 @@
         .header-title h1 {
             font-size: 3rem;
             font-weight: 800;
-            letter-spacing: -1px;
             line-height: 1;
             border-left: 8px solid #ff4d4d;
             padding-left: 20px;
@@ -68,31 +64,32 @@
         /* Split Section */
         .split-video-section {
             display: flex;
-            min-height: 80vh;
+            min-height: 75vh;
             width: 100%;
             border-top: 1px solid #f0f0f0;
             flex-wrap: wrap;
         }
 
-        /* Sisi Kiri: Native Video Player */
+        /* Container Video - Kiri */
         .video-box {
             flex: 1.5;
             min-width: 50%;
-            background: #000;
+            background: #000; /* Hitam agar video terlihat sinematik */
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
-        .video-box video {
+        /* Styling Pemutar Video agar Support Semua Browser */
+        video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Video memenuhi area secara estetis */
-            outline: none;
+            object-fit: cover; /* Video memenuhi area kotak */
+            display: block;
         }
 
-        /* Sisi Kanan: Info Deskripsi */
+        /* Info Deskripsi - Kanan */
         .video-info {
             flex: 1;
             min-width: 400px;
@@ -121,7 +118,7 @@
 
         .video-info p {
             color: #555;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             margin-bottom: 30px;
         }
 
@@ -131,31 +128,16 @@
             text-align: center;
             font-size: 0.8rem;
             color: #aaa;
-            letter-spacing: 1px;
             border-top: 1px solid #f0f0f0;
         }
 
-        /* Mobile Responsive */
+        /* Responsif Mobile */
         @media (max-width: 992px) {
-            .video-info {
-                padding: 40px 30px;
-                min-width: 100%;
-            }
-            .video-box {
-                min-width: 100%;
-                height: 50vh;
-            }
-            .header-title h1 {
-                font-size: 2.5rem;
-            }
-            nav {
-                padding: 20px;
-                justify-content: center;
-            }
-            nav a {
-                margin: 0 10px;
-                font-size: 0.7rem;
-            }
+            .video-info { padding: 40px 20px; min-width: 100%; }
+            .video-box { min-width: 100%; height: 50vh; }
+            .header-title h1 { font-size: 2.5rem; }
+            nav { padding: 20px; justify-content: center; }
+            nav a { margin: 0 10px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -169,22 +151,29 @@
     </nav>
 
     <div class="header-title">
-        <h1>Motion <br> Archive.</h1>
+        <h1>Video <br> Project.</h1>
     </div>
 
     <div class="split-video-section">
         <div class="video-box">
-            <video controls poster="video 1.mp4">
-                <source src="video 1 mp4" type="video 1 mp4">
-                Maaf, browser Anda tidak mendukung pemutar video MP4.
+            <video 
+                controls 
+                preload="metadata" 
+                playsinline 
+                poster="https://via.placeholder.com/1200x800/eeeeee/999999?text=Klik+untuk+Putar+Video">
+                
+                <source src="vid tugas.mp4" type="video/mp4">
+                
+                Browser Anda tidak mendukung pemutar video HTML5.
             </video>
         </div>
 
         <div class="video-info">
-            <span>Video Dokumentasi</span>
+            <span>MP4 Native Format</span>
+            <h2>Dokumentasi Tempat Tinggal</h2>
             
-            <p style="font-size: 0.85rem; color: #888;">
-                *Pastikan file .mp4 Anda sudah di-upload ke repository yang sama dengan file HTML ini.
+            <p style="font-size: 0.8rem; color: #999;">
+                Tips: Pastikan nama file di kode (video-saya.mp4) sama persis dengan nama file di folder GitHub kamu (perhatikan huruf besar/kecil).
             </p>
         </div>
     </div>
