@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Personal Website</title>
+    <style>
+        /* Dasar & Navigasi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1352&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { display: none; } /* Sembunyikan nav di mobile agar simpel */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="video.html">Video</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Halo, Saya [Nama Anda]</h1>
+            <p>Selamat datang di ruang digital saya. Ini adalah tugas website pertama saya menggunakan GitHub Pages.</p>
+            <a href="biodata.html" class="btn">Kenali Saya Lebih Jauh</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Nama Anda]. Dibuat dengan semangat belajar.</p>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Personal Website</title>
+    <style>
+        /* Dasar & Navigasi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1352&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { display: none; } /* Sembunyikan nav di mobile agar simpel */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="video.html">Video</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Halo, Saya [Nama Anda]</h1>
+            <p>Selamat datang di profile saya. Ini adalah tugas dari mata kuliah sistem informasi manajemen perikanan.</p>
+            <a href="biodata.html" class="btn">Kenali Saya Lebih Jauh</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Muhammad Fikri Haikal]. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>
