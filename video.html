@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video | Local Content</title>
+    <title>Video | MP4 Content</title>
     <style>
         /* Reset Dasar */
         * {
@@ -19,7 +19,7 @@
             line-height: 1.6;
         }
 
-        /* Navigation */
+        /* Navigasi Modern */
         nav {
             position: fixed;
             top: 0;
@@ -78,7 +78,7 @@
         .video-box {
             flex: 1.5;
             min-width: 50%;
-            background: #000; /* Latar belakang hitam untuk video */
+            background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -88,10 +88,11 @@
         .video-box video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Video memenuhi area tanpa gap */
+            object-fit: cover; /* Video memenuhi area secara estetis */
+            outline: none;
         }
 
-        /* Sisi Kanan: Info */
+        /* Sisi Kanan: Info Deskripsi */
         .video-info {
             flex: 1;
             min-width: 400px;
@@ -134,7 +135,7 @@
             border-top: 1px solid #f0f0f0;
         }
 
-        /* Responsive Mobile */
+        /* Mobile Responsive */
         @media (max-width: 992px) {
             .video-info {
                 padding: 40px 30px;
@@ -146,6 +147,14 @@
             }
             .header-title h1 {
                 font-size: 2.5rem;
+            }
+            nav {
+                padding: 20px;
+                justify-content: center;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -166,16 +175,16 @@
     <div class="split-video-section">
         <div class="video-box">
             <video controls poster="video 1.mp4">
-                <source src="video 1.mp4" type="video 1.mp4">
-                Browser kamu tidak mendukung pemutar video HTML5.
+                <source src="video 1 mp4" type="video 1 mp4">
+                Maaf, browser Anda tidak mendukung pemutar video MP4.
             </video>
         </div>
 
         <div class="video-info">
-            <span>Local Content</span>
-            <h2>Field Study Documentation</h2>
-           
+            <span>Video Dokumentasi</span>
+            
             <p style="font-size: 0.85rem; color: #888;">
+                *Pastikan file .mp4 Anda sudah di-upload ke repository yang sama dengan file HTML ini.
             </p>
         </div>
     </div>
