@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS RESET & DASAR */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +23,6 @@
             min-height: 100vh;
         }
 
-        /* HEADER & NAVIGASI */
         header {
             background-color: #fff;
             padding: 20px 10%;
@@ -36,7 +34,7 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
             color: #2c3e50;
             text-decoration: none;
         }
@@ -53,7 +51,6 @@
             color: #1abc9c;
         }
 
-        /* AREA KONTEN UTAMA */
         .content-container {
             flex: 1;
             padding: 40px 10%;
@@ -67,11 +64,20 @@
         }
 
         .content-container p {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: #7f8c8d;
         }
 
-        /* WRAPPER IFRAME (Agar Google Sheets Responsif) */
+        .data-section {
+            margin-bottom: 60px;
+        }
+
+        .data-section h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+            font-size: 1.3rem;
+        }
+
         .iframe-wrapper {
             position: relative;
             width: 100%;
@@ -81,26 +87,24 @@
             padding: 10px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden; /* Memastikan sudut tumpul tetap terjaga */
+            overflow: hidden;
         }
 
         iframe {
             width: 100%;
-            height: 650px; /* Tinggi disesuaikan agar enak dilihat di desktop */
+            height: 600px;
             border: 0;
             border-radius: 8px;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 25px 0;
             background: #2c3e50;
             color: white;
-            margin-top: 40px;
+            margin-top: auto;
         }
 
-        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -121,7 +125,7 @@
             }
 
             iframe {
-                height: 450px; /* Tinggi lebih pendek untuk layar HP */
+                height: 450px;
             }
         }
     </style>
@@ -140,11 +144,24 @@
 
     <main class="content-container">
         <h2>Visualisasi Sajian Data</h2>
-        <p>Laporan Interaktif Sistem Informasi Manajemen Perikanan melalui Google Sheets.</p>
+        <p>Laporan Interaktif Sistem Informasi Manajemen Perikanan terintegrasi.</p>
 
-        <div class="iframe-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPuQnW2TdheStJEa_A4NNkGn9LrZDNOtDmCG5ct7SVuxvZuMuLRhSeBYKFqer-I81tDqgYwGm9Ktu3/pubhtml?widget=true&amp;headers=false">
-            </iframe>
+        <div class="data-section">
+            <h3>Dashboard Looker Studio</h3>
+            <div class="iframe-wrapper">
+                <iframe src="https://datastudio.google.com/embed/reporting/7c5db30e-673e-4920-b5e2-8a724c512304/page/page_12345" 
+                        allowfullscreen 
+                        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <h3>Tabel Data Google Sheets</h3>
+            <div class="iframe-wrapper">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPuQnW2TdheStJEa_A4NNkGn9LrZDNOtDmCG5ct7SVuxvZuMuLRhSeBYKFqer-I81tDqgYwGm9Ktu3/pubhtml?widget=true&amp;headers=false">
+                </iframe>
+            </div>
         </div>
     </main>
 
