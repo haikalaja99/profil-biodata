@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sajian Data | My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Menggunakan style yang sama dengan index.html agar konsisten */
+        /* CSS RESET & DASAR */
         * {
             margin: 0;
             padding: 0;
@@ -22,6 +24,7 @@
             min-height: 100vh;
         }
 
+        /* HEADER & NAVIGASI */
         header {
             background-color: #fff;
             padding: 20px 10%;
@@ -50,6 +53,7 @@
             color: #1abc9c;
         }
 
+        /* AREA KONTEN UTAMA */
         .content-container {
             flex: 1;
             padding: 40px 10%;
@@ -57,40 +61,68 @@
         }
 
         .content-container h2 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #2c3e50;
+            font-size: 2rem;
         }
 
-        /* Wrapper untuk Iframe agar responsif */
+        .content-container p {
+            margin-bottom: 30px;
+            color: #7f8c8d;
+        }
+
+        /* WRAPPER IFRAME (Agar Google Sheets Responsif) */
         .iframe-wrapper {
             position: relative;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             background: #fff;
             padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden; /* Memastikan sudut tumpul tetap terjaga */
         }
 
         iframe {
             width: 100%;
-            height: 600px;
+            height: 650px; /* Tinggi disesuaikan agar enak dilihat di desktop */
             border: 0;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 25px 0;
             background: #2c3e50;
             color: white;
             margin-top: 40px;
         }
 
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            nav { display: none; }
-            iframe { height: 450px; }
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            .content-container {
+                padding: 30px 5%;
+            }
+
+            iframe {
+                height: 450px; /* Tinggi lebih pendek untuk layar HP */
+            }
         }
     </style>
 </head>
@@ -102,18 +134,16 @@
             <a href="index.html">Home</a>
             <a href="biodata.html">Biodata</a>
             <a href="tugas4.html">Tugas 4</a>
-            <a href="sajian-data.html" style="color: #1abc9c;">Sajian Data</a>
+            <a href="sajian-data.html" style="color: #1abc9c; border-bottom: 2px solid #1abc9c;">Sajian Data</a>
         </nav>
     </header>
 
     <main class="content-container">
         <h2>Visualisasi Sajian Data</h2>
-        <p style="margin-bottom: 30px;">Laporan interaktif Sistem Informasi Manajemen Perikanan.</p>
+        <p>Laporan Interaktif Sistem Informasi Manajemen Perikanan melalui Google Sheets.</p>
 
         <div class="iframe-wrapper">
-            <iframe src="https://datastudio.google.com/embed/reporting/7c5db30e-673e-4920-b5e2-8a724c512304/page/page_12345" 
-                    allowfullscreen 
-                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPuQnW2TdheStJEa_A4NNkGn9LrZDNOtDmCG5ct7SVuxvZuMuLRhSeBYKFqer-I81tDqgYwGm9Ktu3/pubhtml?widget=true&amp;headers=false">
             </iframe>
         </div>
     </main>
