@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | My Personal Website</title>
     <style>
-        /* Dasar & Navigasi */
+        /* ===== RESET & DASAR ===== */
         * {
             margin: 0;
             padding: 0;
@@ -19,13 +19,14 @@
             line-height: 1.6;
         }
 
+        /* ===== HEADER & NAVIGASI ===== */
         header {
             background-color: #fff;
             padding: 20px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,14 +50,14 @@
             color: #1abc9c;
         }
 
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
                         url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1352&q=80');
             background-size: cover;
             background-position: center;
@@ -76,6 +77,7 @@
             opacity: 0.9;
         }
 
+        /* ===== BUTTON STYLE ===== */
         .btn {
             padding: 12px 30px;
             background-color: #1abc9c;
@@ -85,6 +87,7 @@
             font-weight: bold;
             transition: 0.3s;
             display: inline-block;
+            margin: 5px;
         }
 
         .btn:hover {
@@ -92,7 +95,7 @@
             transform: scale(1.05);
         }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -100,45 +103,43 @@
             color: white;
         }
 
-        /* Responsif */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            nav { display: none; } /* Sembunyikan nav di mobile agar simpel */
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
-
-    <header>
-        <div class="logo">PORTFOLIO.</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="biodata.html">Biodata</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="video.html">Video</a>
-            
-        </nav>
-    </header>
-
+   
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
         <div class="hero-content">
             <h1>Halo, Saya Muhammad Fikri Haikal</h1>
             <p>Selamat datang di ruang profile saya. Ini adalah tugas membuat website mata kuliah sistem informasi manajemen perikanan.</p>
-            <a href="biodata.html" class="btn">Profile Saya Lebih Jauh</a>
 
-             <a href="tugas2.html" class="btn">tugas 2</a>
-             <a href="https://forms.gle/eufpBWjGh2a87FYV6" class="btn">tugas 3</a>
-            <a href="https://forms.gle/J3V6Za9je1DmotKS7" class="btn">tugas 4</a>
-            <a href="https://datastudio.google.com/s/nAg4-byfyH8" class="btn">sajian data tugas 3</a>
-             <a href="sajian data tugas 4.html" class="btn">sajian data tugas 4</a>
-            <a href="tugas 5.html" class="btn">sajian data tugas 5</a>
+            <!-- ===== BUTTON GROUPS ===== -->
+            <div class="button-group">
+                <a href="tugas1/tugas1.html" class="btn">Tugas 1</a>
+                <a href="tugas2/tugas2.html" class="btn">Tugas 2</a>
+                 <a href="tugas3/tugas3.html" class="btn">Tugas 3</a>
+                 <a href="tugas4/tugas4.html" class="btn">Tugas 4</a>
+                 <a href="tugas5/tugas5.html" class="btn">Tugas 5</a>
             
+            </div>
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <p>&copy; 2026 [Muhammad Fikri Haikal]. Dibuat dengan sepenuh hati.</p>
+        <p>&copy; 2026 Muhammad Fikri Haikal. Dibuat dengan sepenuh hati.</p>
     </footer>
-
 </body>
+
 </html>
